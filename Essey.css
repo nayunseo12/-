@@ -1,0 +1,121 @@
+:root {
+  --body-bg: blueviolet;
+  --hamburger-bg: blueviolet;
+  --temp-bg: violet;
+}
+body {
+  background-color: var(--body-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu {
+  width: 100%;
+  height: 100px;
+  background: white;
+  position: relative;
+  border-radius: 40px;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+  width: 65px;
+  height: 9px;
+  transition: 0.5s;
+  background: var(--temp-bg);
+  margin-left: 94%;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  margin-left: 0%;
+}
+.hamburger {
+  top: 45%;
+}
+.hamburger::before {
+  top: -20px;
+}
+.hamburger::after {
+  top: 20px;
+}
+.toggle:checked ~ .hamburger::after {
+  top: 0;
+  transform: rotate(225deg);
+}
+.toggle:checked ~ .hamburger::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.toggle:checked ~ .hamburger {
+  background: white;
+}
+.toggle {
+  opacity: 0;
+}
+
+.container {
+  margin-top: 30px;
+  background-color: white;
+  width: 400px;
+  height: 650px;
+  border-radius: 2rem;
+}
+.banner {
+  background-image: url(worlds.jpg);
+  background-size: 400px 300px;
+
+  width: 400px;
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  /* border-radius: 10px; */
+}
+.profile {
+  height: 170px;
+  width: 170px;
+
+  border-radius: 300px;
+
+  background-image: url(다운로드.jpg);
+  background-size: 170px 170px;
+
+  position: relative;
+  top: 200px;
+
+  transition: transform 1s ease-in-out;
+}
+
+.profile:hover {
+  transform: scale(1.2);
+}
+.name {
+  margin-top: 90px;
+  text-align: center;
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+.follow {
+  margin-top: -10px;
+  height: 50px;
+  width: 200px;
+  background-color: yellow;
+  border-radius: 50px;
+  border: none;
+  font-size: medium;
+  font-weight: bold;
+}
+.follow:active {
+  transform: scale(1.1);
+}
+.Cbal {
+  height: 100px;
+  margin: 20px;
+  overflow: auto;
+  text-align: center;
+}

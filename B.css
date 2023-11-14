@@ -1,0 +1,22 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text_box {
+  display: block;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
